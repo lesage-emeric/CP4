@@ -49,7 +49,7 @@ const router = createBrowserRouter([
         loader: recipesLoader,
       },
       {
-        path: "/recette/",
+        path: "/recette/:id",
         element: <RecipeFocus />,
       },
       {

@@ -10,13 +10,11 @@ function Recipes() {
       <section className="recipes_list">
         {recipes.map((recipe) => {
           return (
+            // biome-ignore lint/a11y/useKeyWithClickEvents: <explanation>
             <article
               className="recipe_container"
               key={recipe.id}
-              onClick={() => navigate("/")}
-              onKeyUp={(e) => {
-                if (e.key === "Enter") navigate("/");
-              }}
+              onClick={() => navigate(`/recette/${recipe.id}`)}
             >
               <img
                 className="recipe_img"
