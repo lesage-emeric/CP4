@@ -52,18 +52,24 @@ app.use(
 
 // Uncomment one or more of these options depending on the format of the data sent by your client:
 
-// app.use(express.json());
+app.use(express.json());
 // app.use(express.urlencoded());
 // app.use(express.text());
 // app.use(express.raw());
 
 /* ************************************************************************* */
 
+import authRouter from "./modules/auth/authRouter";
+import recipeRouter from "./modules/recipe/recipeRouter";
+import userRouter from "./modules/user/userRouter";
 // Import the API router
 import router from "./router";
 
 // Mount the API router under the "/api" endpoint
 app.use(router);
+app.use(authRouter);
+app.use(recipeRouter);
+app.use(userRouter);
 
 /* ************************************************************************* */
 
