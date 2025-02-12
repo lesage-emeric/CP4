@@ -14,3 +14,7 @@ export type User = {
   email: string;
   hashed_password: string;
 };
+
+export type Ingredient = {
+  id: number;
+};
