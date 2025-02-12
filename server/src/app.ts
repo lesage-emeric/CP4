@@ -61,6 +61,7 @@ app.use(express.json());
 
 import authRouter from "./modules/auth/authRouter";
 import recipeRouter from "./modules/recipe/recipeRouter";
+import recipeIngredientRouter from "./modules/recipe_ingredient/recipeIngredientRouter";
 import userRouter from "./modules/user/userRouter";
 // Import the API router
 import router from "./router";
@@ -69,6 +70,7 @@ import router from "./router";
 app.use(router);
 app.use(authRouter);
 app.use(recipeRouter);
+app.use(recipeIngredientRouter);
 app.use(userRouter);
 
 /* ************************************************************************* */

@@ -17,7 +17,7 @@ const getRecipeById: RequestHandler = async (req, res, next) => {
     const recipe = await recipeRepository.read(recipeId);
 
     if (!recipe) {
-      res.status(404).json({ success: false, message: "Recipe not found" });
+      res.status(404).json({ success: false, message: "Recipe not found." });
     }
     res.json(recipe);
   } catch (error) {
