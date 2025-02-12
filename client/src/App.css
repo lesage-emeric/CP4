@@ -3,3 +3,26 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+.navbar {
+  display: flex;
+  width: 100vw;
+  height: 6vh;
+  justify-content: space-around;
+  align-items: center;
+  position: fixed;
+  bottom: 0;
+  background-color: white;
+}
+
+.nav_ul {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+}
+
+.nav_ul button {
+  border-radius: 20px;
+  width: 4.2rem;
+  height: 2rem;
+}

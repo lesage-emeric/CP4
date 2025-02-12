@@ -10,7 +10,8 @@ import App from "./App";
 import Cart from "./pages/Cart";
 import Home from "./pages/Home";
 import Planning from "./pages/Planning";
-import Recipe from "./pages/Recipe";
+import RecipeFocus from "./pages/RecipeFocus";
+import Recipes from "./pages/Recipes";
 
 // Import additional components for new routes
 // Try creating these components in the "pages" folder
@@ -19,6 +20,21 @@ import Recipe from "./pages/Recipe";
 // import Contact from "./pages/Contact";
 
 /* ************************************************************************* */
+
+const recipesLoader = async () => {
+  try {
+    const response = await fetch(`${import.meta.env.VITE_API_URL}/api/recipes`);
+    if (!response.ok) {
+      throw new Error("Erreur de chargement des recettes");
+    }
+
+    const data = await response.json();
+    return data;
+  } catch (error) {
+    console.error("Erreur dans le loading des recettes", error);
+    throw new Error("Impossible de charger les recettes.");
+  }
+};
 
 // Create router configuration with routes
 // You can add more routes as you build out your app!
@@ -29,7 +45,12 @@ const router = createBrowserRouter([
     children: [
       {
         path: "/recettes",
-        element: <Recipe />,
+        element: <Recipes />,
+        loader: recipesLoader,
+      },
+      {
+        path: "/recette/",
+        element: <RecipeFocus />,
       },
       {
         path: "/planning",

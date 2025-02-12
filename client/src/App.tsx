@@ -7,7 +7,7 @@ function App() {
   return (
     <>
       <nav className="navbar">
-        <ul>
+        <ul className="nav_ul">
           <li>
             <button type="button" onClick={() => navigate("/recettes")}>
               Recettes
