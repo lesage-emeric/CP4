@@ -1,12 +1,13 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import type { RecipeProps } from "../types/types";
+import type { RecipeProps } from "../../../types/types";
 import "./RecipeFocus.css";
-import RecipeInstructions from "../components/RecipeInstructions";
+import RecipeIngredients from "../../../components/RecipeIngredients";
+import RecipeInstructions from "../../../components/RecipeInstructions";
 
 function RecipeFocus() {
   const { id } = useParams();
-  const [recipe, setRecipe] = useState<RecipeProps>();
+  const [recipe, setRecipe] = useState<RecipeProps | null>(null);
 
   useEffect(() => {
     fetch(`${import.meta.env.VITE_API_URL}/api/recipe/${id}`)
@@ -26,6 +27,7 @@ function RecipeFocus() {
         Prévoyez {recipe?.prep_time} minutes de préparation et{" "}
         {recipe?.cook_time} minutes de cuisson
       </p>
+      {recipe && <RecipeIngredients />}
       {recipe && <RecipeInstructions instructions={recipe.instructions} />}
     </>
   );

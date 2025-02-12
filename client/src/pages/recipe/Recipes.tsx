@@ -1,5 +1,5 @@
 import { useLoaderData, useNavigate } from "react-router-dom";
-import type { RecipeProps } from "../types/types";
+import type { RecipeProps } from "../../types/types";
 import "./Recipes.css";
 
 function Recipes() {

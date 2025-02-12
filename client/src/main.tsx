@@ -7,11 +7,11 @@ import { RouterProvider, createBrowserRouter } from "react-router-dom";
 
 // Import the main app component
 import App from "./App";
-import Cart from "./pages/Cart";
-import Home from "./pages/Home";
-import Planning from "./pages/Planning";
-import RecipeFocus from "./pages/RecipeFocus";
-import Recipes from "./pages/Recipes";
+import Cart from "./pages/cart/Cart";
+import Home from "./pages/home/Home";
+import Planning from "./pages/planning/Planning";
+import Recipes from "./pages/recipe/Recipes";
+import RecipeFocus from "./pages/recipe/focus/RecipeFocus";
 
 // Import additional components for new routes
 // Try creating these components in the "pages" folder

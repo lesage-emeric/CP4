@@ -4,7 +4,8 @@
   box-sizing: border-box;
 }
 
-ol {
+ol,
+ul {
   margin: 0;
   padding: 2rem;
 }

@@ -8,3 +8,9 @@ export type RecipeProps = {
   prep_time: number;
   cook_time: number;
 };
+
+export type IngredientProps = {
+  name: string;
+  quantity: string;
+  unit: string;
+};

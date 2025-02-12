@@ -1,5 +1,4 @@
 import type { RecipeProps } from "../types/types";
-import "./RecipeInstructions.css";
 
 function RecipeInstructions({
   instructions,
